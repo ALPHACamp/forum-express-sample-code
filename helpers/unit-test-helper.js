@@ -14,7 +14,7 @@ const createModelMock = (name, data, joinedTableName, sourceData) => {
           ...data[objIndex],
           ...changes
         }
-        return Promise.resolve()
+        return Promise.resolve([1, [data[objIndex]]])
       },
       destroy: function () {
         if (joinedTableName) {
